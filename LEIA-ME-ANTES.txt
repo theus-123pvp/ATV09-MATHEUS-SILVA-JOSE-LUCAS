@@ -1,0 +1,3 @@
+IMPORTANTE: esta pasta é uma primeira versão adaptada para a ATV09, montada a partir do ZIP enviado. O ambiente desta edição não executou o Django nem verificou o projeto dentro do Ubuntu. Siga o README e teste os comandos. Se aparecer erro, envie o texto completo do terminal para correção.
+
+O comando `python manage.py seed_portal` cadastra quatro conteúdos internos e seis itens de menu de demonstração. Revise conteúdo, dados pessoais, imagens e informações esportivas antes de entregar.

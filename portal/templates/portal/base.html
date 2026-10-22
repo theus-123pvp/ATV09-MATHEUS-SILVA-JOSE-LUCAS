@@ -1,0 +1,30 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Portal — Matheus e José Lucas{% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'portal/css/style.css' %}">
+</head>
+<body>
+<div class="site-shell">
+    <header class="site-header"><a href="{% url 'inicio' %}">Nossas informações</a></header>
+    <div class="layout">
+        <nav class="menu" aria-label="Menu principal">
+            <h2>Menu</h2>
+            <a class="menu-link" href="{% url 'inicio' %}">Início</a>
+            {% for item in itens_menu %}
+                {% if item.tipo_destino == 'interno' and item.conteudo and item.conteudo.ativo %}
+                    <a class="menu-link" href="{% url 'conteudo' item.conteudo.slug %}">{{ item.titulo }}</a>
+                {% elif item.tipo_destino == 'externo' %}
+                    <a class="menu-link" href="{{ item.url_externa }}" target="_blank" rel="noopener noreferrer">{{ item.titulo }} ↗</a>
+                {% endif %}
+            {% endfor %}
+        </nav>
+        <main class="content">{% block content %}{% endblock %}</main>
+    </div>
+    <footer class="site-footer">ATV09 — Turma 513 — José Lucas Galdino Vieira e Matheus da Silva Cordeiro</footer>
+</div>
+</body>
+</html>

@@ -1,0 +1,11 @@
+{% extends 'portal/base.html' %}
+{% load static %}
+{% block title %}Início — Portal{% endblock %}
+{% block content %}
+<section class="home-content">
+    <img class="cover" src="{% static 'portal/img/IMG-20260616-WA0009.jpg' %}" alt="Montagem com símbolos do Corinthians e Flamengo e os integrantes do trabalho">
+    <h1>Informações pessoais e temas livres</h1>
+    <p>Bem-vindo ao portal de José Lucas e Matheus. Aqui você pode conhecer um pouco sobre os integrantes do trabalho e conferir conteúdos sobre Flamengo e Corinthians.</p>
+    <p>Use o menu para navegar entre os currículos e os temas livres. Os itens de navegação são gerenciados pelo Django Admin.</p>
+</section>
+{% endblock %}
