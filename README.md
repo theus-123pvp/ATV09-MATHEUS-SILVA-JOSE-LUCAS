@@ -1,3 +1,5 @@
+Integrantes: Matheus Silva e José Lucas
+Turma: 513
 # ATV09 — Migração do Portal para Django
 
 Projeto adaptado a partir dos arquivos enviados da atividade anterior. O visual original foi mantido como referência (fundo escuro e menu vermelho), as imagens originais foram preservadas em `portal/static/portal/img/` e a navegação principal foi migrada para URLs e Views do Django.
